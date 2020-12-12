@@ -1,0 +1,359 @@
+@import "@/assets/styles/function";
+.page-box {
+  padding: 10px;
+}
+.txt-center {
+  display: block;
+  text-align: center;
+}
+.topr-title {
+  // float: left;
+  width: 20%;
+  font: bold 1.2rem/2rem;
+  margin-left: 10px;
+  .txt {
+    display: block;
+    font: normal 0.8rem/1.5rem;
+    color: #ccc;
+  }
+}
+
+.pages {
+  padding-bottom: 50px;
+  &-swipe {
+    text-align: center;
+    img {
+      // width: 100%;
+      @include superfixrem((
+        height: 300
+      ));
+    }
+    video {
+      @include superfixrem((
+        height: 400
+      ));
+    }
+  }
+  &-con {
+    overflow: hidden;
+    background-color: #fff;
+    > dt {
+      @extend %display_flex;
+      @include flex-flow('row', 'nowrap');
+      @include justify-content('flex-start');
+      @include align-items('stretch');
+      resize: vertical;
+      @include superfixrem((
+        height: 32,
+        line-height: 32   // !important
+      ));
+      // letter-spacing: -3px;
+      word-spacing: 0;
+      margin: 10px auto;
+      padding-left: 5px;
+      border-left: 3px solid rgb(34, 146, 250);
+      > h3 {
+        // display: inline-block;
+        @include flex-style(0, 1, auto);
+        @include superfixrem((
+          font-size: 28
+        ));
+        color: #333;
+        letter-spacing: 0px;
+      }
+      .icon {
+        // display: inline-block;
+        @include flex-style(0, 1, auto);
+        @include superfixrem((
+          font-size: 25
+        ));
+        color: #555;
+        // margin-left: 5px!important;
+      }
+    }
+    dd {
+      margin-bottom: 0.66rem;
+      overflow: hidden;
+      .sup-img {
+        float: left;
+        @include superfixrem((
+          width: 126,
+          height: 126
+        ));
+        margin: 0 8px 0 3px;
+      }
+      img {
+        border-radius: 5px; 
+      }
+      .v-icon {
+        float: right;
+        margin: auto 8px;
+        @include superfixrem((
+          line-height: 126
+        ));
+        vertical-align: middle;
+        cursor: pointer;
+        color: #666;
+      }
+      h5 {
+        @include superfixrem((
+          line-height: 64,
+          font-size: 30
+        ));
+        color: #555;
+      }
+      p {
+        color: #999;
+        @include superfixrem((
+          line-height: 70,
+          font-size: 25.6
+        ));
+      }
+    }
+    dd.indd {
+      display: inline-block;
+      @include superfixrem((
+        width: 200,
+        // height: 200
+      ));
+      margin: 0px 3px 5px 3px;
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
+      p {
+        @include superfixrem((
+          height: 70,
+          line-height: 35,
+          font-size: 24
+        ));
+        margin: 0 auto;
+        color: #666;
+        @extend %txt-pw-wb-ep
+      }
+    }
+  }
+  &-title {
+    font: normal 16px/1;
+  }
+  &-price {
+    color: #f44;
+  }
+  &-express {
+    color: #999;
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+  &-cell-group {
+    margin: 15px 0;
+    .van-cell__value {
+      color: #999;
+    }
+  }
+  &-tag {
+    margin-left: 5px;
+  }
+
+  .pages-act {
+    // height: 100%;
+    overflow: auto;
+    background-color: #5e0ef1;
+    .swipe-box {
+      // position: relative;
+      width: 100%;
+      @include superfixrem(("height": 400));
+      // overflow: hidden;
+      // padding: 0 4rem;
+      text-align: center;
+      .vimg {
+        // width: calc(80vw-8rem);
+        @include superfixrem((
+          // width:-moz-calc(100% - 160px),
+          // width:-webkit-calc(100% - 160px),
+          width: calc(100% - 160px),
+          height: 400
+        ));
+      }
+    }
+    .indicator-left, .indicator-right {
+      position: absolute;   
+      @include superfixrem((
+        "top": 176,
+        "font-size": 64
+      ));
+      color: #ddd;
+      &:hover{
+        color: #66dbeb;
+      }
+    }
+    .indicator-left{
+      @include superfixrem((
+        left: -16,
+      ));
+    }
+    .indicator-right {
+      @include superfixrem((
+        right: -16,
+      ));
+    }
+
+    .con-act {
+      overflow: hidden;
+      @include superfixrem(("margin-top": -25));
+      background: url('../../assets/images/act_top_bg.png') no-repeat top center;
+      background-size: 100% auto;
+      -webkit-background-origin: padding-box; /* Safari */
+      background-origin: padding-box;
+      dt {
+        display: grid;
+        // height: px2rem(68, 2);
+        // padding: px2rem(45 60 16, 2);
+        @include superfixrem(("height": 68, "padding": 45 60 18));
+        // padding: 1.5rem 1rem 0.5rem;
+        // text-align: center;
+        color: #fff;
+        
+        // @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
+        //   @include px2rem(height, 82, 2);
+        //   @include px2rem(padding, 60 75 16, 1);
+        // }
+        // @media ($minPixelRatio: 3), ($minPixelRatio: 3dppx) {
+        //   @include px2rem(height, 92, 3)
+        // }
+        h1 {
+          margin: auto;
+          font-weight: bold;
+          font-style: italic;
+          font-family: Arial, "Arial Rounded MT Bold", "Helvetica Rounded", sans-serif;
+          //text-shadow: [X offset] [Y offset] [Blur size] [Colour];
+          // text-shadow: 
+          //   1px 1px 0 #ccc,
+          //   2px 2px 0 #ccc,
+          //   3px 3px 0 #ccc,
+          //   // 4px 4px 0 #888,
+          //   // 5px 5px 0 #888,
+          //   5px 6px 3px #0a0553;
+          text-transform: uppercase;
+          color: #eee;
+          text-shadow: 0 6px 6px #0a0553, 0px -1px 1px #fff;
+          letter-spacing: -1px;
+          text-align: center;
+          // background: linear-gradient(to bottom, #ece4d9 0%,#e9dfd1 100%);
+          // transform: translate(-50%,-50%);
+
+          /* 设备像素比（DPR) = 设备(物理)像素 / 设备独立(逻辑）像素
+           * 定义设备的分辨率：96dpi, 300dpi 点每英寸, 118dpcm 点每厘米, dppx点每像素 
+           * Safari还不支持resolution媒体特性
+           * Safari有一个和该特性等同的私有特性:-webkit-device-pixel-ratio
+           */ 
+          // @media (min-resolution: 2dppx) {}
+          // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+          //   font-size: 1.2rem;
+          //   line-height: 2.9rem;
+          // }
+          // line-height: 2.9rem;
+          @include superfixrem(("font-size": 38.86));
+          em{
+            @include superfixrem(("font-size": 42));
+          }
+        }
+        h1:hover {
+          /* CSS3 Transform Effect */
+          -webkit-transform: scale(1.05); /* Safari & Chrome */
+          -moz-transform: scale(1.05); /* Firefox */
+          -o-transform: scale(1.05); /* Opera */
+          @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
+            -webkit-transform: scale(1.1); /* Safari & Chrome */
+            -moz-transform: scale(1.1); /* Firefox */
+            -o-transform: scale(1.1); /* Opera */
+          }
+        }
+      }
+      dd {
+        overflow: hidden;
+        @include superfixrem(("height": 191, "padding": 28 64));
+        color: #fff;
+        word-spacing: 0;
+        h5 {
+          @include superfixrem(("font-size": 28, "line-height": 48));
+        }
+        p {
+          @include superfixrem(("font-size": 19.2, "line-height": 39));
+          // @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
+          //   font-size: 0.8rem;
+          //   line-height: 1.5rem;
+          // }
+        }
+        s {
+          display: inline-block;
+          color: #999;
+          @include superfixrem(("font-size": 16, "padding-top": 8));
+        }
+        button {
+          float: right;
+          display: inline-block;
+          margin-top: 3px;
+          font-weight: bold;
+          color: #fff;
+          letter-spacing: 1px;
+          background-color: rgb(228, 19, 151);
+          @include superfixrem((
+            "height": 38.4,
+            "line-height": 38.4,
+            "padding": 0 25.6,
+            "font-size": 25.6,
+            "border-radius": 19.2
+          ));
+        }
+        .price-info {
+          // width: 56vw;
+          @include superfixrem((
+            "height": 32
+          ));
+          // overflow: hidden;
+          color: #f1860b;   
+          strong {
+            display: inline-block;
+            // font-weight: bolder;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 0;
+            @include superfixrem((
+              "font-size": 32,
+              "line-height": 32
+            ));
+            // @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
+            //   font-size: 1.3rem;
+            //   letter-spacing: 2px;
+            //   line-height: 1.3rem !important;
+            // }
+          }
+          .txt {
+            display: inline-block;
+            @include superfixrem((
+              "margin": 0 16,
+              "padding-top": 16,
+              "line-height": 16,
+              "font-size": 16
+            ));
+          }
+        }
+      }
+      dd.bg-bt {
+        @include superfixrem(("height": 218));
+        background: url('../../assets/images/act_bottom_bg.png') no-repeat top center;
+        background-size: 100% auto;
+        -webkit-background-origin: padding-box; /* Safari */
+        background-origin: padding-box;
+      }
+    }
+    
+    @media ($minPixelRatio: 3), ($minPixelRatio: 3dppx) {
+      // html:not([data-scale]) .am-accordion::before {
+      //   -webkit-transform: scaleY(0.33);
+      //       -ms-transform: scaleY(0.33);
+      //           transform: scaleY(0.33);
+      // }
+    }
+  }
+}
