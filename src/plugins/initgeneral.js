@@ -1,9 +1,9 @@
 import _ from "lodash"
-import { Lazyload } from 'vant';
+import { Toast, Lazyload } from 'vant';
 // import moment from "dayjs"
-// import Fetch from "../api/fetch"
-// import { ApiAuth, Api } from "../api/api"
-// import BaseURl from "../api/ipconfig"
+import Fetch from "@/api/fetch"
+import { ApiAuth, Api } from "@/api/api"
+import BaseURl from "@/api/ipconfig"
 
 // import 'font-awesome/css/font-awesome.css'
 
@@ -14,13 +14,13 @@ const GeneralPlugin = {
     // Vue.Fetch = Fetch;
     // window.Fetch = Fetch;
     // 全局实例方法
-    // Vue.prototype.$fetch = Fetch
+    Vue.prototype.$fetch = Fetch
     // Vue.prototype.$moment = moment
     Vue.prototype._ = _
 
     // 全局的api
-    // Vue.prototype.$ApiAuth = new ApiAuth(BaseURl.ipAuth)
-    // Vue.prototype.$Api = new Api(BaseURl.ipCommon)
+    Vue.prototype.$ApiAuth = new ApiAuth(BaseURl.ipAuth)
+    Vue.prototype.$Api = new Api(BaseURl.ipCommon)
     // Vue.prototype.$ApiChart = new ApiChart(BaseURl.ipCommon)
 
     // Object.defineProperties(Vue.prototype, {
@@ -55,6 +55,7 @@ export default function UseGeneral(Vue, Vant) {
   Vue.use(GeneralPlugin)
 
   Vue.use(Vant)
+  Vue.use(Toast)
   Vue.use(Lazyload, {
     lazyComponent: true,
   });

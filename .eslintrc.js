@@ -38,6 +38,9 @@ module.exports = {
     'prefer-const': 0,
     'no-unneeded-ternary': 0,
     'no-useless-return': 0,
+    'no-useless-escape': 0,
+    'lines-between-class-members': 0,
+    'object-curly-spacing': 0,
     // 'no-console': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'

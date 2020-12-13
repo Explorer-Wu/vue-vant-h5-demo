@@ -155,7 +155,9 @@
   }
 
   .pages-act {
-    // height: 100%;
+    height: calc(100vh - 100px);
+    height: -moz-calc(100vh - 100px);
+    height: -webkit-calc(100vh - 100px);
     overflow: auto;
     background-color: #5e0ef1;
     .swipe-box {
@@ -296,22 +298,28 @@
           font-weight: bold;
           color: #fff;
           letter-spacing: 1px;
-          background-color: rgb(228, 19, 151);
+          // background-color: rgb(228, 19, 151);
+          background-image: radial-gradient(#fc19e9, #c712b8);
+          box-shadow: 0 3px 9px rgba(86, 9, 131, 0.58);
           @include superfixrem((
-            "height": 38.4,
-            "line-height": 38.4,
-            "padding": 0 25.6,
+            "height": 40,
+            "line-height": 40,
+            "padding": 0 22,
             "font-size": 25.6,
-            "border-radius": 19.2
+            "border-radius": 20
           ));
         }
         .price-info {
           // width: 56vw;
           @include superfixrem((
-            "height": 32
+            "height": 40
           ));
-          // overflow: hidden;
-          color: #f1860b;   
+          // padding-bottom: 5px;
+          overflow: auto;
+          background: linear-gradient(to bottom ,#f3aa0b,#f1860b);
+          -webkit-background-clip: text;
+          color: transparent;
+          // color: #f3aa0b;
           strong {
             display: inline-block;
             // font-weight: bolder;

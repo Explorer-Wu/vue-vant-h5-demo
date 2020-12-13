@@ -66,10 +66,10 @@ export default {
   },
   methods: {
     onClickLeft() {
-      // Toast('返回');
+      // this.$toast('返回');
     },
     handleSearch() {
-      // Toast('按钮');
+      // this.$toast('按钮');
     }
   }
 };

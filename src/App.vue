@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { Toast } from 'vant';
+// import { this.$toast } from 'vant';
 export default {
   data() {
     return {
@@ -46,16 +46,16 @@ export default {
   },
   methods: {
     onClickLeft() {
-      Toast('返回');
+      this.$toast('返回');
     },
     onClickRight() {
       this.isSearch = true
     },
     onSearch(val) {
-      Toast(val);
+      this.$toast(val);
     },
     onCancel() {
-      // Toast('取消');
+      // this.$toast('取消');
       this.isSearch = false
     },
     onChange(name) {
