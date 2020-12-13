@@ -160,7 +160,6 @@ export default {
       } else {
         let now = new Date()
         let nowtime = now.getTime()
-        this.flag = false;
         if (CookieStorage.getCookie('endtime') === null || CookieStorage.getCookie('endtime') < nowtime || document.cookie.indexOf('endtime=') === -1) {
           CookieStorage.setCookie('endtime', nowtime + 60 * 1000, '60s')
           CookieStorage.setCookie('phone', this.actData.phone, '1d')
@@ -169,7 +168,8 @@ export default {
       }
     },
     fetchCodeMsg() {
-      const that = this
+      const that = this;
+      this.flag = false;
       const intervalObj = setInterval(() => {
         if (that.curSecond-- <= 0) {
           that.curSecond = 60;
@@ -188,10 +188,10 @@ export default {
         }
       })
       .catch(err => {
-        // this.flag = true;
-        // clearInterval(intervalObj);
-        // this.curSecond = 60;
-        // this.fetchTxt = '重新获取验证码';
+        this.flag = true;
+        clearInterval(intervalObj);
+        this.curSecond = 60;
+        this.fetchTxt = '重新获取验证码';
         this.$notify({ type: 'danger', message: err + '发送失败，请重新发送!' });  
       })
     }
