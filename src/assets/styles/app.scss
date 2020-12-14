@@ -22,15 +22,10 @@
   padding-bottom: 50px;
   &-swipe {
     text-align: center;
-    img {
+    img, video {
       // width: 100%;
       @include superfixrem((
-        height: 300
-      ));
-    }
-    video {
-      @include superfixrem((
-        height: 400
+        height: 480
       ));
     }
   }
@@ -44,8 +39,8 @@
       @include align-items('stretch');
       resize: vertical;
       @include superfixrem((
-        height: 32,
-        line-height: 32   // !important
+        height: 37.5,
+        line-height: 37.5   // !important
       ));
       // letter-spacing: -3px;
       word-spacing: 0;
@@ -56,7 +51,7 @@
         // display: inline-block;
         @include flex-style(0, 1, auto);
         @include superfixrem((
-          font-size: 28
+          font-size: 32.8
         ));
         color: #333;
         letter-spacing: 0px;
@@ -65,31 +60,31 @@
         // display: inline-block;
         @include flex-style(0, 1, auto);
         @include superfixrem((
-          font-size: 25
+          font-size: 29.3
         ));
         color: #555;
         // margin-left: 5px!important;
       }
     }
     dd {
-      margin-bottom: 0.66rem;
       overflow: hidden;
       .sup-img {
         float: left;
         @include superfixrem((
-          width: 126,
-          height: 126
+          width: 148,
+          height: 148,
+          margin-bottom: 25
         ));
         margin: 0 8px 0 3px;
       }
       img {
-        border-radius: 5px; 
+        border-radius: 6px; 
       }
       .v-icon {
         float: right;
         margin: auto 8px;
         @include superfixrem((
-          line-height: 126
+          line-height: 148
         ));
         vertical-align: middle;
         cursor: pointer;
@@ -97,23 +92,23 @@
       }
       h5 {
         @include superfixrem((
-          line-height: 64,
-          font-size: 30
+          line-height: 70,
+          font-size: 35
         ));
         color: #555;
       }
       p {
         color: #999;
         @include superfixrem((
-          line-height: 70,
-          font-size: 25.6
+          line-height: 80,
+          font-size: 30
         ));
       }
     }
     dd.indd {
       display: inline-block;
       @include superfixrem((
-        width: 200,
+        width: 276,
         // height: 200
       ));
       margin: 0px 3px 5px 3px;
@@ -123,9 +118,9 @@
       }
       p {
         @include superfixrem((
-          height: 70,
-          line-height: 35,
-          font-size: 24
+          height: 72,
+          line-height: 37.5,
+          font-size: 30
         ));
         margin: 0 auto;
         color: #666;
@@ -163,7 +158,7 @@
     .swipe-box {
       // position: relative;
       width: 100%;
-      @include superfixrem(("height": 400));
+      @include superfixrem(("height": 480));
       // overflow: hidden;
       // padding: 0 4rem;
       text-align: center;
@@ -173,7 +168,7 @@
           // width:-moz-calc(100% - 160px),
           // width:-webkit-calc(100% - 160px),
           width: calc(100% - 160px),
-          height: 400
+          height: 480
         ));
       }
     }
@@ -181,7 +176,7 @@
       position: absolute;   
       @include superfixrem((
         "top": 176,
-        "font-size": 64
+        "font-size": 70
       ));
       color: #ddd;
       &:hover{
@@ -210,7 +205,7 @@
         display: grid;
         // height: px2rem(68, 2);
         // padding: px2rem(45 60 16, 2);
-        @include superfixrem(("height": 68, "padding": 45 60 18));
+        @include superfixrem(("height": 98, "padding": 58 75 37.5));
         // padding: 1.5rem 1rem 0.5rem;
         // text-align: center;
         color: #fff;
@@ -254,9 +249,9 @@
           //   line-height: 2.9rem;
           // }
           // line-height: 2.9rem;
-          @include superfixrem(("font-size": 38.86));
+          @include superfixrem(("font-size": 48.75));
           em{
-            @include superfixrem(("font-size": 42));
+            @include superfixrem(("font-size": 50));
           }
         }
         h1:hover {
@@ -273,14 +268,14 @@
       }
       dd {
         overflow: hidden;
-        @include superfixrem(("height": 191, "padding": 28 64));
+        @include superfixrem(("height": 252, "padding": 37.5 75));
         color: #fff;
         word-spacing: 0;
         h5 {
-          @include superfixrem(("font-size": 28, "line-height": 48));
+          @include superfixrem(("font-size": 40, "line-height": 60));
         }
         p {
-          @include superfixrem(("font-size": 19.2, "line-height": 39));
+          @include superfixrem(("font-size": 26, "line-height": 50));
           // @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
           //   font-size: 0.8rem;
           //   line-height: 1.5rem;
@@ -289,7 +284,7 @@
         s {
           display: inline-block;
           color: #999;
-          @include superfixrem(("font-size": 16, "padding-top": 8));
+          @include superfixrem(("font-size": 26, "padding-top": 12));
         }
         button {
           float: right;
@@ -302,21 +297,21 @@
           background-image: radial-gradient(#fc19e9, #c712b8);
           box-shadow: 0 3px 9px rgba(86, 9, 131, 0.58);
           @include superfixrem((
-            "height": 40,
-            "line-height": 40,
-            "padding": 0 22,
-            "font-size": 25.6,
-            "border-radius": 20
+            "height": 50,
+            "line-height": 50,
+            "padding": 0 26,
+            "font-size": 30,
+            "border-radius": 25
           ));
         }
         .price-info {
           // width: 56vw;
           @include superfixrem((
-            "height": 40
+            "height": 53
           ));
           // padding-bottom: 5px;
           overflow: auto;
-          background: linear-gradient(to bottom ,#f3aa0b,#f1860b);
+          background: linear-gradient(to bottom ,#fcb213,#f78b0f);
           -webkit-background-clip: text;
           color: transparent;
           // color: #f3aa0b;
@@ -327,28 +322,23 @@
             margin: 0;
             padding: 0;
             @include superfixrem((
-              "font-size": 32,
-              "line-height": 32
+              "font-size": 48,
+              "line-height": 48
             ));
-            // @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
-            //   font-size: 1.3rem;
-            //   letter-spacing: 2px;
-            //   line-height: 1.3rem !important;
-            // }
           }
           .txt {
             display: inline-block;
             @include superfixrem((
-              "margin": 0 16,
-              "padding-top": 16,
-              "line-height": 16,
-              "font-size": 16
+              "margin": 0 18,
+              "padding-top": 22,
+              "line-height": 26,
+              "font-size": 26
             ));
           }
         }
       }
       dd.bg-bt {
-        @include superfixrem(("height": 218));
+        @include superfixrem(("height": 280));
         background: url('../../assets/images/act_bottom_bg.png') no-repeat top center;
         background-size: 100% auto;
         -webkit-background-origin: padding-box; /* Safari */

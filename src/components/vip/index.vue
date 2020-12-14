@@ -48,7 +48,7 @@
       close-on-click-action
     >
     <!-- description="这是一段描述信息" -->
-      <van-form class="content" validate-trigger="onChange" @submit="onSubmit" @failed="onFailed" >
+      <van-form class="content" validate-trigger="onChange" @submit="onSubmit">
       <!-- <van-cell-group> -->
         <!-- 通过 validator 进行函数校验 error-message="手机号格式错误"-->
         <van-field

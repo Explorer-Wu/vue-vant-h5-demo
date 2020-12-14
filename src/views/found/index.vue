@@ -9,7 +9,7 @@
       <van-tab title="音乐">
         <van-swipe class="pages-swipe" :autoplay="3000">
           <van-swipe-item v-for="(thumd, index) in musics.imglist" :key="`img${index}`">
-            <van-image lazy-load :fit="thumd.mode" :src="thumd.url"/>
+            <van-image lazy-load width="100%" :fit="thumd.mode" :src="thumd.url"/>
             <!-- <van-image :src="thumd"/> -->
           </van-swipe-item>
         </van-swipe>
@@ -20,7 +20,8 @@
           </dt>
           <dd class="indd" v-for="(cdd, cidex) in con.hotlist" :key="`con${index}cdd${cidex}`">
             <van-image
-              fit="cover"
+              width="100%"
+              fit="fill"
               :src="cdd.url"
             />
             <p>{{cdd.text}}</p>
@@ -28,7 +29,7 @@
           <dd v-for="(sdd, sidex) in con.suplist" :key="`con${index}sdd${sidex}`">
             <van-image
               class="sup-img"
-              fit="cover"
+              fit="fill"
               :src="sdd.url"
             />
             <van-icon class="v-icon" name="arrow" />
@@ -138,7 +139,7 @@ export default {
             text: '东方流韶：倾听民乐精选集'
           }, {
             url: "http://p4.music.126.net/wGSy2XKSLvs2q-hLnXbxKA==/109951165227667289.jpg?param=140y140",
-            text: '欧美民谣丨散文诗般的情绪荡漾我心  散文诗般的情绪荡漾我心'
+            text: '欧美民谣丨散文诗般的情绪荡漾我心散文  诗般的情绪荡漾我心'
           }, {
             url: "http://p4.music.126.net/PQ2ZI4DO5LueJ-ruoA_mvw==/109951165313889467.jpg?param=140y140",
             text: '倾听大自然 · 轻音乐狂想曲'

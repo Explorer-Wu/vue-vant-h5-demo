@@ -71,7 +71,7 @@ $minResolution: min-resolution;
     $rem-values: ();
     //Conver the baseline into rems 
     // $baseline-rem: $baseline-px / 1rem * 1;
-    $baseline-rem: 32 / 1rem * $dprValue;
+    $baseline-rem: 37.5 / 1rem * $dprValue;
     
     // @if $dprValue == 2 {
     //     $baseline-rem: $baseline-rem * 2;
@@ -111,18 +111,18 @@ $minResolution: min-resolution;
 
 @mixin superfixrem($propers) {
     @each $name, $values in $propers {
-        #{$name}: px2rem($values, 1);
+        #{$name}: px2rem($values, 1.171875);
         @media ($minPixelRatio: 2), ($minPixelRatio: 2dppx) {
             @media only screen and (min-width: 375px) {
-                #{$name}: px2rem($values, 0.853);
+                #{$name}: px2rem($values, 1);
                 @media (min-width: 411px) {
-                    #{$name}: px2rem($values, 0.776);
+                    #{$name}: px2rem($values, 0.9129);
                     @media (min-width: 540px) {
-                        #{$name}: px2rem($values, 0.592);
+                        #{$name}: px2rem($values, 0.695);
                         @media (min-width: 768px) {
-                            #{$name}: px2rem($values, 0.416);
+                            #{$name}: px2rem($values, 0.48828125);
                             @media (min-width: 1024px) {
-                                #{$name}: px2rem($values, 0.313);
+                                #{$name}: px2rem($values, 0.36621094);
                             }
                         }
                     }
@@ -131,13 +131,16 @@ $minResolution: min-resolution;
             // #{$name}: px2rem($values, 2);
             @media ($minPixelRatio: 3), ($minPixelRatio: 3dppx) {
                 @media only screen and (min-width: 360px) {
-                    #{$name}: px2rem($values, 0.886);
-                    @media (min-width: 411px) {
-                        #{$name}: px2rem($values, 0.776);
-                        @media (min-width: 768px) {
-                            #{$name}: px2rem($values, 0.416);
-                            @media (min-width: 1024px) {
-                                #{$name}: px2rem($values, 0.313);
+                    #{$name}: px2rem($values, 1.041666);
+                    @media only screen and (min-width: 375px) {
+                        #{$name}: px2rem($values, 1);
+                        @media (min-width: 411px) {
+                            #{$name}: px2rem($values, 0.9057971);
+                            @media (min-width: 768px) {
+                                #{$name}: px2rem($values, 0.48828125);
+                                @media (min-width: 1024px) {
+                                    #{$name}: px2rem($values, 0.36621094);
+                                }
                             }
                         }
                     }
